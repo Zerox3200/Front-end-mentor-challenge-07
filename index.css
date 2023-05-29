@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Create the main container */
+.Main {
+    width: 100%;
+    margin: auto;
+    height: 609px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 27% 1fr;
+}
+
+/* Create the first part of the container */
+.Main_pt1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+    background-image: url(images/bg-main-desktop.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Create the Cards */
+.Main_pt1_card1 {
+    height: 167px;
+    width: 327px;
+    position: relative;
+    left: 139px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(images/bg-card-front.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    border: solid #00000059 1px;
+}
+
+.Main_pt1_card1_pt1 {
+    height: 48px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 17px;
+}
+
+.Main_pt1_card1_pt2 {
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0px;
+}
+
+.Main_pt1_card1_pt2 p:first-of-type {
+    font-size: 21px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.Main_pt1_card1_pt2 p:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    width: 89%;
+    color: white;
+}
+
+.circle_card1_pt1 {
+    border-radius: 50px;
+    border: solid transparent 1px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: relative;
+}
+
+.circle_card1_pt1::after {
+    content: "";
+    border: solid white 1px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 124%;
+    top: 22%;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+.Main_pt1_card2 {
+    height: 167px;
+    width: 327px;
+    position: relative;
+    left: 180px;
+    background-image: url(images/bg-card-back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 33px;
+    color: white;
+    border-radius: 5px;
+    border: solid #00000059 1px;
+}
+
+
+/* Create the second part of the container */
+.Main_pt2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Main_pt2_form {
+    height: 306px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 7px;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+.Main_pt2_form_inp {
+    width: 100%;
+    height: 71px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Main_pt2_form_inp_flexing {
+    flex-direction: row;
+}
+
+.Main_pt2_form_inp_1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Main_pt2_form_inp_1_pt1 label {
+    letter-spacing: 2.5px;
+}
+
+.Main_pt2_form_inp_1_pt2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Main_pt2_form_inp_1_pt2 input:first-of-type {
+    width: 40%;
+}
+
+.Main_pt2_form_inp_1_pt2 input:nth-of-type(2) {
+    width: 44%;
+}
+
+.Main_pt2_form_inp_2 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+.Main_pt2_form_inp_2 input {
+    margin-left: 4px;
+    width: 68% !important;
+}
+
+.Main_pt2_form_inp label {
+    font-size: 12px;
+}
+
+.Main_pt2_form_inp input {
+    width: 82%;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 0.4px black;
+    outline: none;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6233dd;
+}
+
+.alert {
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    font-style: italic;
+    visibility: hidden;
+}
+
+button {
+    width: 83%;
+    height: 34px;
+    background-color: #220930;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+@media screen and (max-width:767px) {
+    .Main {
+        grid-template-columns: auto;
+        grid-template-rows: 40% 1fr;
+    }
+
+    .Main_pt1_card1 {
+        left: -18px;
+        width: 238px;
+        height: 137px;
+        order: 2;
+        z-index: 2;
+        bottom: -13px;
+    }
+
+
+    .Main_pt1_card1_pt2 p:first-of-type {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .circle_card1_pt1 {
+        width: 35px;
+        height: 35px;
+    }
+
+    .Main_pt1 {
+        row-gap: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Main_pt1_card1_pt2 p:nth-of-type(2) {
+        font-size: 14px;
+    }
+
+    .Main_pt1_card2 {
+        left: 12px;
+        width: 259px;
+        height: 122px;
+        top: 50px;
+    }
+
+    .Main_pt2_form {
+        align-items: center;
+        width: 100%;
+    }
+
+    .Main_pt2_form_inp label {
+        letter-spacing: 0px;
+    }
+
+    button {
+        margin-top: 9px;
+        height: 41px;
+        width: 88%;
+    }
+
+    .Main_pt2_form_inp_flexing {
+        column-gap: 8px;
+    }
+
+    .Main_pt2_form_inp {
+        padding-left: 9px;
+    }
+
+    .Complete {
+        width: 285px !important;
+    }
+}
+
+.Alerting {
+    border-color: red !important;
+}
+
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.dateAndName {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Complete {
+    width: 370px;
+    height: 251px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 24px;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+.Complete p:first-of-type {
+    font-size: 23px;
+    font-style: italic;
+}
+
+.Complete p:nth-of-type(2) {
+    opacity: 0.5;
+}
+
+.Complete img {
+    width: 91px;
+}
+
+.Remove {
+    display: none !important;
+}
+
+.Remove_smoothly {
+    opacity: 0;
+}
+
+.visible {
+    display: flex !important;
+}

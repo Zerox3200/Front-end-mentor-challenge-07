@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+  <div class="Main">
+    <div class="Main_pt1">
+      <div class="Main_pt1_card1">
+        <div class="Main_pt1_card1_pt1">
+          <div class="circle_card1_pt1"></div>
+        </div>
+        <div class="Main_pt1_card1_pt2">
+          <p id="Full_Numbering">0000 0000 0000 0000</p>
+          <p><span id="Full_Naming">JANE APPLESED</span>
+            <span id="Full_Date">
+              <span id="Day_test">00/</span>
+              <span id="Month_test">00</span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="Main_pt1_card2">
+        <p id="CVC_test">000</p>
+      </div>
+    </div>
+    <div class="Main_pt2">
+      <div class="Main_pt2_form">
+        <div class="Main_pt2_form_inp">
+          <label for="name_input">FULL NAME</label>
+          <input type="text" name="" id="name_input" placeholder="JANE APPLESED">
+          <p class="alert show hide" id="Name_alert_message">
+            wrong name we can't find this name..</p>
+        </div>
+        <div class="Main_pt2_form_inp">
+          <label for="Number">CARD NUMBER</label>
+          <input type="text" name="" id="Number" placeholder="0000 0000 0000 0000">
+          <p class="alert show hide" id="Number_alert_message">
+            wrong number, don't use letters or anything not a number!
+          </p>
+        </div>
+        <div class="Main_pt2_form_inp Main_pt2_form_inp_flexing">
+          <div class="Main_pt2_form_inp_1">
+            <div class="Main_pt2_form_inp_1_pt1">
+              <label for="">Exp.Date (MM/YY)</label>
+            </div>
+            <div class="Main_pt2_form_inp_1_pt2">
+              <input type="datetime" name="" id="Days" placeholder="00">
+              <input type="datetime" name="" id="Months" placeholder="00">
+            </div>
+            <p class="alert" id="alert3">Can't be blank!</p>
+          </div>
+          <div class="Main_pt2_form_inp_2">
+            <label for="">CVC</label>
+            <input type="text" name="" id="CVC_access" placeholder="000">
+            <p class="alert" id="alert4">Can't be blank!</p>
+          </div>
+        </div>
+        <button id="Confirm">Confirm</button>
+      </div>
+      <div class="Complete Remove">
+        <img src="images/icon-complete.svg" alt="">
+        <p>Thank you!</p>
+        <p>We have added your card details</p>
+        <button>Confirm</button>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
